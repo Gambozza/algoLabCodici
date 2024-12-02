@@ -2,10 +2,7 @@
 Mega file occhi blu finale con le principali strutture/firme/ecc.. che il prof ha detto che spesso chiede all'esame in modo da averle tutte in un posto
 
 # Comandi essenziali per aggiornare/caricare un file in una repository Git
-
-Di seguito sono elencati i comandi essenziali per aggiornare o caricare un file in una repository Git.
-
-## Tabella dei comandi
+#FAI QUESTI COMANDI CON GIT BASH, NELLA CARTELLA CON I FILE, PER CARICARLI NELLA REPOSITORY
 
 | **Comando**                     | **Descrizione**                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------|
