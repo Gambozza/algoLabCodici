@@ -23,6 +23,8 @@ typedef struct Lista
     Nodo *tail; // Puntatore all'ultimo nodo
 } Lista;
 
+void list_insert(Lista *lista, int value)
+
 /**********************************************************************************************
 
 La lista è rappresentata da una struttura contenente due puntatori:  head, che indica il primo nodo, e tail, che punta all’ultimo nodo.
