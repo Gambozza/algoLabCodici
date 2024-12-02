@@ -1,6 +1,22 @@
 # algoLabCodici
 Mega file occhi blu finale con le principali strutture/firme/ecc.. che il prof ha detto che spesso chiede all'esame in modo da averle tutte in un posto
 
+# Comandi essenziali per aggiornare/caricare un file in una repository Git
+
+Di seguito sono elencati i comandi essenziali per aggiornare o caricare un file in una repository Git.
+
+## Tabella dei comandi
+
+| **Comando**                     | **Descrizione**                                                                                   |
+|---------------------------------|---------------------------------------------------------------------------------------------------|
+| `git status`                    | Controlla lo stato del repository: file modificati, non tracciati o pronti per il commit.        |
+| `git add <nome_file>`           | Aggiunge un file specifico alla staging area.                                                    |
+| `git add .`                     | Aggiunge **tutti i file modificati** o nuovi alla staging area.                                  |
+| `git commit -m "messaggio"`     | Crea un commit con un messaggio descrittivo delle modifiche.                                     |
+| `git pull`                      | Scarica le modifiche dal repository remoto (utile prima di fare il push per evitare conflitti).  |
+| `git push`                      | Carica i commit locali sul branch remoto.                                                       |
+
+---
 
 
 # Comandi principali di Git
