@@ -94,14 +94,3 @@ Ecco un elenco dei principali termini utilizzati in Git con i loro significati.
 
 ---
 
-### **Esempio pratico**
-1. Quando inizi a lavorare su un progetto, crei un **repository**.
-2. Modifichi i file nella tua **working directory**.
-3. Aggiungi le modifiche alla **staging area** con il comando `git add`.
-4. Salvi queste modifiche nel repository con un **commit**.
-5. Se vuoi condividere il tuo lavoro, usi `git push` per caricarlo su un repository **remoto** (es. GitHub).
-6. Se qualcuno modifica i file sul repository remoto, usi `git pull` per sincronizzarti e scaricare le modifiche.
-7. Se lavori su una nuova funzionalità, crei un nuovo **branch** (es. `nuova-funzionalità`) e poi lo **merge** nel branch principale (`main`).
-
----
-
