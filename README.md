@@ -1,6 +1,18 @@
 # algoLabCodici
 Mega file occhi blu finale con le principali strutture/firme/ecc.. che il prof ha detto che spesso chiede all'esame in modo da averle tutte in un posto
 
+# FAI QUESTI COMANDI CON GIT BASH, NELLA CARTELLA CON I FILE, PER CARICARLI NELLA REPOSITORY
+
+| **Comando**                     | **Descrizione**                                                                                   |
+|---------------------------------|---------------------------------------------------------------------------------------------------|
+| `git status`                    | Controlla lo stato del repository: file modificati, non tracciati o pronti per il commit.        |
+| `git add <nome_file>`           | Aggiunge un file specifico alla staging area.                                                    |
+| `git add .`                     | Aggiunge **tutti i file modificati** o nuovi alla staging area.                                  |
+| `git commit -m "messaggio"`     | Crea un commit con un messaggio descrittivo delle modifiche.                                     |
+| `git pull`                      | Scarica le modifiche dal repository remoto (utile prima di fare il push per evitare conflitti).  |
+| `git push`                      | Carica i commit locali sul branch remoto.                                                       |
+
+---
 
 
 # Comandi principali di Git
@@ -79,17 +91,6 @@ Ecco un elenco dei principali termini utilizzati in Git con i loro significati.
 | **Untracked**       | File presenti nella directory di lavoro, ma non ancora tracciati da Git.                                   |
 | **Tracked**         | File che Git sta già monitorando e che fanno parte della cronologia del repository.                        |
 | **Fast-Forward**    | Un tipo di merge semplice dove un branch è "avanzato" fino a coincidere con un altro, senza creare nuovi commit. |
-
----
-
-### **Esempio pratico**
-1. Quando inizi a lavorare su un progetto, crei un **repository**.
-2. Modifichi i file nella tua **working directory**.
-3. Aggiungi le modifiche alla **staging area** con il comando `git add`.
-4. Salvi queste modifiche nel repository con un **commit**.
-5. Se vuoi condividere il tuo lavoro, usi `git push` per caricarlo su un repository **remoto** (es. GitHub).
-6. Se qualcuno modifica i file sul repository remoto, usi `git pull` per sincronizzarti e scaricare le modifiche.
-7. Se lavori su una nuova funzionalità, crei un nuovo **branch** (es. `nuova-funzionalità`) e poi lo **merge** nel branch principale (`main`).
 
 ---
 
