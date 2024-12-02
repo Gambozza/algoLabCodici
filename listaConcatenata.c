@@ -34,24 +34,24 @@ typedef struct itemlist itemlist;
 item list_search(itemlist *head, key k);
 /************************************************************************************************************************************************************************************
 
-La procedura di ricerca in una lista concatenata è un processo iterativo che esplora
-sequenzialmente ogni nodo della lista a partire dalla sua testa, cioè il primo elemento.
-La funzione di ricerca riceve in input un puntatore al primo nodo della lista (head)
-e una chiave (k), che rappresenta il valore da trovare.
-L’obiettivo è individuare il nodo il cui campo chiave corrisponda esattamente al valore fornito.
+GPT
 
-La logica consiste nell'utilizzare un ciclo per attraversare la lista, partendo dal nodo iniziale e
-procedendo attraverso i collegamenti definiti dal puntatore al nodo successivo.
-Per ciascun nodo visitato, si estrae il valore della chiave associata e lo si confronta con la chiave di ricerca.
-Questo confronto viene effettuato utilizzando una funzione specifica, progettata per determinare se due chiavi siano uguali.
-Se il confronto restituisce un risultato positivo, significa che il nodo corrente contiene i dati cercati,
-e il puntatore al nodo viene restituito come risultato della funzione.
+La funzione list_search consente di individuare un elemento in una lista concatenata utilizzando come criterio 
+di confronto una chiave di ricerca. Ogni nodo della lista contiene un campo dati strutturato con tre informazioni: 
+un valore intero valint, una stringa codice che funge da chiave di ricerca e un codice ID di tipo unsigned long int. 
+La funzione riceve come parametri un puntatore alla testa della lista, head, e una chiave k contenente la stringa da cercare.
 
-Nel caso in cui il nodo corrente non corrisponda alla chiave di ricerca,
-il processo prosegue passando al nodo successivo.
-Questo ciclo continua fino a quando non si trova un nodo corrispondente oppure si raggiunge la fine della lista,
-ovvero un nodo il cui puntatore successivo è nullo. Se la lista viene completamente attraversata senza trovare una corrispondenza,
-la funzione restituisce un valore nullo per indicare che la chiave non è presente nella lista.
+La ricerca procede scorrendo la lista a partire da head. 
+Ad ogni nodo, il campo codice del nodo corrente, accessibile come current->dati.chiave.codice, 
+viene confrontato con il valore della chiave k.codice utilizzando una funzione standard come strcmp. 
+Se si trova una corrispondenza, la funzione restituisce il campo dati del nodo corrente, 
+altrimenti continua fino alla fine della lista. Se nessun nodo soddisfa il criterio, 
+la funzione restituisce un valore indicativo di assenza.
+
+La complessità temporale della funzione è O(n), dove n è il numero di nodi nella lista, 
+poiché nel caso peggiore è necessario visitare tutti i nodi. La complessità spaziale è O(1), 
+poiché la memoria utilizzata è costante. list_search è quindi un metodo semplice ed efficace 
+per effettuare ricerche lineari in una lista concatenata.
 
 ************************************************************************************************************************************************************************************/
 
@@ -95,21 +95,21 @@ itemlist *list_insert(itemlist *head);
 
 /*******************************************************************************************************************
 
-La funzione list_insert, che prende in ingresso il puntatore alla testa della lista, ha il compito di creare un nuovo elemento e integrarlo correttamente.
-Per fare questo, la funzione inizia allocando memoria per il nuovo nodo e inizializzandolo con i dati forniti.
-Questi dati comprendono una chiave composta, il nome e il cognome, che vengono assegnati ai campi del nuovo nodo.
+La funzione list_insert è progettata per aggiungere un nuovo nodo a una lista concatenata. 
+Ogni nodo della lista contiene tre informazioni principali: una stringa nome, una stringa cognome e una chiave 
+composta da due interi c1 e c2. Il parametro head rappresenta la testa della lista concatenata e 
+viene utilizzato come punto di partenza per l'inserimento del nuovo nodo.
 
-Se l'inserimento deve avvenire all'inizio della lista, il nuovo nodo viene collegato al resto della struttura impostando il suo
-puntatore al nodo che attualmente rappresenta la testa della lista. A questo punto, il nuovo nodo diventa la nuova testa e il suo puntatore
-viene restituito dalla funzione per riflettere il cambiamento.
+La logica della funzione prevede la creazione di un nuovo nodo, inizializzando i suoi campi con i valori specificati per nome, 
+cognome e la chiave chiave. Il nodo creato viene quindi inserito in testa alla lista concatenata 
+o in una posizione determinata da un criterio specifico.
 
-L’inserimento di un nuovo nodo in una lista concatenata è un’operazione che aggiunge un elemento alla struttura mantenendo l’integrità dei collegamenti
-tra i nodi. La funzione list_insert accetta un puntatore al primo nodo della lista, chiamato testa, e si occupa di creare un nuovo nodo con i dati forniti.
-Questi dati includono la chiave composta da due interi, il nome e il cognome.
-Il primo passo è allocare memoria per il nuovo nodo, assicurandosi che sia pronto per essere inserito.
+Se si sceglie di inserire il nodo in testa, il nuovo nodo diventa la testa della lista: 
+il suo campo next viene impostato per puntare al nodo che era precedentemente la testa. 
+La funzione restituisce quindi il nuovo nodo come nuova testa della lista.
 
-Una volta creato il nodo, il suo contenuto viene inizializzato con i dati forniti. Se il nuovo nodo deve essere aggiunto all’inizio della lista,
-il puntatore del nuovo nodo viene impostato in modo da collegarlo all’attuale testa della lista,
-e la funzione aggiorna la testa per farla puntare al nuovo nodo. In questo caso, il nuovo nodo diventa il primo elemento della lista.
+La complessità temporale dell'inserimento in testa è O(1), poiché richiede solo l'aggiornamento di un puntatore. 
+Tuttavia, se l'inserimento deve rispettare un criterio di ordinamento, la complessità potrebbe aumentare a O(n), 
+dove n è il numero di nodi nella lista, poiché sarà necessario individuare la posizione corretta scorrendo la lista.
 
 ********************************************************************************************************************/
