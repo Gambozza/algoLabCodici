@@ -1,4 +1,4 @@
-# Stile delle Risposte Richiesto
+# SCRIVI A CHAT GPT QUESTO IN MODO CHE CAPISCA LO STILE DELLE RISPOSTE
 
 Voglio che le risposte seguano questo stile, basandosi su come il professore preferisce che vengano strutturate durante l’esame. Di seguito, le regole principali:
 
