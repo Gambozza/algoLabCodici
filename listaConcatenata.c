@@ -31,7 +31,7 @@ struct nodo
 } nodo;
 typedef struct itemlist itemlist;
 
-item list_search(itemlist * head, key k);
+item list_search(itemlist *head, key k);
 /************************************************************************************************************************************************************************************
 
 La procedura di ricerca in una lista concatenata è un processo iterativo che esplora
@@ -54,3 +54,62 @@ ovvero un nodo il cui puntatore successivo è nullo. Se la lista viene completam
 la funzione restituisce un valore nullo per indicare che la chiave non è presente nella lista.
 
 ************************************************************************************************************************************************************************************/
+
+/**********************************************************************************************************
+
+Fornire il codice C che definisca una struttura lista concatenata, i cui
+elementi contengano tre informazioni:
+una stringa nome,
+una stringa cognome,
+una coppia di interi c1 e c2 fungono anche da chiave di ricerca
+(composta).
+Se ne descriva la procedura di inserimento di una chiave (nodo),
+indicandone solo il prototipo e facendo riferimento ai membri delle
+strutture ricevute in input (senza implementazione).
+
+**********************************************************************************************************/
+
+#define STRLEN 16
+struct key
+{
+    int c1, c2;
+};
+typedef struct key key;
+
+struct item
+{
+    key chiave;
+    char nome[STRLEN];
+    char cognome[STRLEN];
+};
+typedef struct item item;
+
+struct itemlist
+{
+    item dati;
+    struct itemlist *next;
+};
+typedef struct itemlist itemlist;
+
+itemlist *list_insert(itemlist *head);
+
+/*******************************************************************************************************************
+
+La funzione list_insert, che prende in ingresso il puntatore alla testa della lista, ha il compito di creare un nuovo elemento e integrarlo correttamente.
+Per fare questo, la funzione inizia allocando memoria per il nuovo nodo e inizializzandolo con i dati forniti.
+Questi dati comprendono una chiave composta, il nome e il cognome, che vengono assegnati ai campi del nuovo nodo.
+
+Se l'inserimento deve avvenire all'inizio della lista, il nuovo nodo viene collegato al resto della struttura impostando il suo
+puntatore al nodo che attualmente rappresenta la testa della lista. A questo punto, il nuovo nodo diventa la nuova testa e il suo puntatore
+viene restituito dalla funzione per riflettere il cambiamento.
+
+L’inserimento di un nuovo nodo in una lista concatenata è un’operazione che aggiunge un elemento alla struttura mantenendo l’integrità dei collegamenti
+tra i nodi. La funzione list_insert accetta un puntatore al primo nodo della lista, chiamato testa, e si occupa di creare un nuovo nodo con i dati forniti.
+Questi dati includono la chiave composta da due interi, il nome e il cognome.
+Il primo passo è allocare memoria per il nuovo nodo, assicurandosi che sia pronto per essere inserito.
+
+Una volta creato il nodo, il suo contenuto viene inizializzato con i dati forniti. Se il nuovo nodo deve essere aggiunto all’inizio della lista,
+il puntatore del nuovo nodo viene impostato in modo da collegarlo all’attuale testa della lista,
+e la funzione aggiorna la testa per farla puntare al nuovo nodo. In questo caso, il nuovo nodo diventa il primo elemento della lista.
+
+********************************************************************************************************************/
