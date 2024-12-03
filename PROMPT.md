@@ -3,7 +3,7 @@
 Voglio che le risposte seguano questo stile, basandosi su come il professore preferisce che vengano strutturate durante l’esame. Di seguito, le regole principali:
 
 1. **Prototipo chiaro e visibile**:
-   Inizia sempre riportando il prototipo della funzione o della struttura richiesta, con la sintassi corretta in linguaggio C. Il prototipo deve essere immediatamente visibile e comprensibile.
+   Inizia sempre riportando il prototipo della funzione o della struttura richiesta, con la sintassi corretta in linguaggio C. Il prototipo deve essere immediatamente visibile e comprensibile. Mantieni un livello di astrazione alto.
 
 2. **Definizione della struttura dati**:
    Fornisci la definizione della struttura dati richiesta utilizzando uno stile modulare e chiaro. Le strutture devono essere progettate in modo che i campi siano ben definiti, con nomi intuitivi e dichiarazioni concise. Utilizza il formato `typedef` per creare alias utili e semplificare l’uso della struttura, quando appropriato. Fai attenzione alla logica di collegamento tra i nodi (se applicabile), utilizzando campi come `next` per liste concatenate o `top` per pile.
