@@ -34,8 +34,6 @@ typedef struct itemlist itemlist;
 item list_search(itemlist *head, key k);
 /************************************************************************************************************************************************************************************
 
-GPT
-
 La funzione list_search consente di individuare un elemento in una lista concatenata utilizzando come criterio 
 di confronto una chiave di ricerca. Ogni nodo della lista contiene un campo dati strutturato con tre informazioni: 
 un valore intero valint, una stringa codice che funge da chiave di ricerca e un codice ID di tipo unsigned long int. 
