@@ -38,7 +38,7 @@ Se la coda è vuota, ossia se il puntatore testa è nullo, il nuovo nodo viene i
 Altrimenti, il nuovo nodo viene collegato al nodo attualmente in coda tramite il puntatore next del nodo precedente, 
 e il puntatore coda della struttura della coda viene aggiornato per riferirsi al nuovo nodo. 
 Infine, il campo dimensione della struttura Coda viene incrementato per riflettere l’aggiunta del nuovo elemento. 
-La complessità temporale di questa operazione è O(n), poiché l’inserimento nel caso peggiore deve scorrere tutta la coda.
+La complessità temporale di O(1), poiché l’inserimento viene eseguito direttamente utilizzando il puntatore alla coda senza dover attraversare la struttura.
 
 **********************************************************************************************/
 
